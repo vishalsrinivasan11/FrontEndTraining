@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Example</title>
+</head>
+<body>
+
+    <div>
+        <h2>CSS Example</h2>
+    </div>
+    <div>
+        <h2>Other Properties</h2>
+        <div id="hideandSeek">
+            <div class="hiddenBlock">
+                Iruku aana illa<br>
+                iogio ie fs jf0s mm vp sdpvj dspvsd vpdsvi nsdovniosnvn<br>
+                ndsijndsjonv  vsnvosn vodsnvvodsvnsdovnl<br>
+                ksjdbvkjds v <label>hello </label>vndso vodvklds vns vjvv vaonvlw ivn <br>
+                ksjdbvkldjnvl vnfiovnawj oawdnv adnvad ivlasn vin
+            </div>
+            <a href="http://www.google.com">Google</a>
+        </div>
+        <style>
+            a{
+                text-decoration: none;
+                color: black;
+                cursor:no-drop;
+                font-size: 30px;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                font-style:italic;
+                letter-spacing: 2px;
+                
+            }
+            .hiddenBlock{
+                width: 100px;
+                height: 100px;
+                background-color: darkgoldenrod;
+                overflow:scroll;
+                opacity: 0.9;
+                text-decoration-line:line-through;
+                text-decoration-color: brown;
+                text-decoration-style: dotted;
+                line-height: 50px;
+            }
+            #hideandSeek{
+                visibility: visible;
+            }
+        </style>
+    </div>
+    <div>
+        <h2>Position Properties</h2>
+
+        <div class="posDiv" style="background-color: aquamarine;">
+            <h3>Static</h3>
+            <div class="posIndDiv">1</div>
+            <div id="posStatic" class="posIndDiv">2</div>
+            <div class="posIndDiv">3</div>
+        </div>
+        <div class="posDiv" style="background-color: blueviolet;">
+            <h3>Relative</h3>
+            <div class="posIndDiv">1</div>
+            <div id="posRelative" class="posIndDiv">2</div>
+            <div class="posIndDiv">3</div>
+        </div>
+        <div class="posDiv" style="background-color: darkkhaki;">
+            <h3>Absolute</h3>
+            <div class="posIndDiv">1</div>
+            <div id="posAbsolute" class="posIndDiv">2</div>
+            <div class="posIndDiv">3</div>
+        </div>
+        <div class="posDiv" style="background-color: darksalmon;">
+            <h3>Fixed</h3>
+            <div class="posIndDiv">1</div>
+            <div class="posIndDiv" id="posFixed">2</div>
+            <div class="posIndDiv">3</div>
+        </div>
+        <div class="posDiv" style="background-color: darkslategray; height: 800px;">
+            <h3>Sticky</h3>
+            <div class="posIndDiv">1</div>
+            <div class="posIndDiv" id="posSticky">2</div>
+            <div class="posIndDiv">3</div>
+        </div>
+        <style>
+            #posStatic{
+                position: static;
+            }
+            #posRelative{
+                display: flex;
+                position: relative;
+                left: 200px;
+                background-color: rgb(60, 224, 126);
+            }
+            #posAbsolute{
+                display: flex;
+                position: absolute;
+                left: 600px;
+                background-color: coral;
+            }
+            #posFixed{
+                display: flex;
+                position: fixed;
+                left: 300px;
+                top: 300px;
+                background-color: brown;
+            }
+            #posSticky{
+                display: flex;
+                position: sticky;
+                left: 400px;
+                top:500px;
+                background-color: khaki;
+            }
+            .posDiv{
+                margin-bottom:120px;
+                width:200px;
+                height: 200px;
+            }
+            .posIndDiv{
+                width: 100px;
+                height: 100px;
+                border:solid 2px brown;
+            }
+            /* div{
+                width: 100px;
+                height: 100px;
+                border: solid 2px goldenrod;
+                padding: 100px;
+                margin: 20px;
+            } */
+        </style>
+    </div>
+
+
+
+    <p style="color:crimson; margin:50px;" class="txtContent">
+        kzdfjghkjlfs sinv svids v dsi vids vis v<br>
+        sljvhdskjnvkds dsn did dsvnvdson osnosnc sdncdso <br>
+        zdsklvhdskjnn d hsdo sh o sh dsohdsOhouds hoshd
+    </p>
+    <img src="./assets/cats1.png" id="catImg"/>
+    <div class="txtContent">kzjdfvk suv dv uhvni n</div>
+    <ol>
+        <li>aaaa</li>
+        <li>bbbb</li>
+        <li>ccccc</li>
+    </ol>
+
+    <table>
+        <tr>
+            <th>slno</th>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Ice</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Choco</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Rice</td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Ice</td>
+            <td>50</td>
+        </tr>
+    </table>
+    <style>
+        /* *{
+            border:solid red 5px;
+        } */
+
+        h2{
+            color:darkred;
+        }
+        h2:hover{
+            color: rebeccapurple;
+            text-decoration: underline;
+        }
+        td, li{
+            color:darkgreen; 
+        }
+
+        .txtContent{
+            margin: 40px;
+            border: dotted yellowgreen 2px;
+        }
+        #catImg{
+            width: 500px;
+            height: 300px;
+            
+
+        }
+
+
+    </style>
+</body>
+</html>
