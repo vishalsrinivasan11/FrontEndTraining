@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h2>Variable & Functions</h2>
+
+            <ul>
+                <li>Let</li>
+                <li>Var</li>
+                <li>Const</li>
+            </ul>
+            <ol>
+                <li>Named Function</li>
+                <li>Arrow Function</li>
+                <li>Inner Function</li>
+                <li>Closure</li>
+                <li>Call Back Function</li>
+                <li>Recursive Function</li>
+            </ol>
+            <script>
+
+                let fName="Vishal";
+                var age = 21;
+                let isMajor = true;
+                const BORNCOUNTRY = "US";
+
+                printValues();
+                // console.log(fName);
+                // console.log(age);
+                // console.log(isMajor);
+                // console.log(BORNCOUNTRY);
+
+                fName = "Arun";
+                age = 17;
+                isMajor = false;
+                //BORNCOUNTRY = "US";
+
+                printValues();
+
+                function printValues(){
+                    console.log(fName);
+                    console.log(age);
+                    console.log(isMajor);
+                    console.log(BORNCOUNTRY);
+                }
+
+                console.log(mark1);
+                //console.log(mark2);
+
+                var mark1 = 90;
+                let mark2 = 50;
+
+                console.log(mark1);
+                console.log(mark2);
+
+                function getAdd(val1, val2){
+                    return val1 + val2;
+                }
+
+                function displayAdd(val1, val2){
+                    console.log(val1 + val2 + " Is the Result");
+                }
+
+                function sayHello(){
+                    console.log("Vanakam da mapla");
+                }
+
+                function getHelloMsg(){
+                    return "Hello ";
+                }
+
+                let sumVal = getAdd(10,30);
+                console.log(sumVal);
+                
+
+                displayAdd(50,100);
+                sayHello();
+                console.log(getHelloMsg());
+
+            </script>
+        </div>
+    </div>
+</body>
+</html>
