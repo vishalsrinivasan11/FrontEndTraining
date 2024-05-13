@@ -143,6 +143,39 @@
                 }
             </script>
         </div>
+        <div>
+            <h2>Conditions</h2>
+            <div class="row m-4">
+                <div class="col"><label>Age</label></div>
+                <div class="col"><input type="number" id="ageCalc" name="ageCalc" onkeyup="ageCalc()" class="form-control"/></div>
+                <div class="col"><span id="ageCalcMsg"></span></div>
+            </div>         
+            
+            
+            <script>
+                function ageCalc(){
+                    let age = Number(document.getElementById('ageCalc').value);
+                    let msg = "";
+                    if(age > 18){
+                        if(age > 60){
+                            msg = "Senior Citizen";
+                        }else{
+                            msg="Major";
+                        }
+                    }else if(age > 10){
+                        msg = "Minor";
+                    }else if(age >5){
+                        msg = "Kid";
+                    }else if(age >0){
+                        msg = "Kolanthai";
+                    }else{
+                        msg = "Innum Porakala";
+                    }
+
+                    document.getElementById('ageCalcMsg').innerHTML = msg;
+                }
+            </script>
+        </div>
     </div>
 </body>
 </html>
