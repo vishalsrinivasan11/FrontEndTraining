@@ -94,6 +94,38 @@
                 
             </script>
         </div>
+        <div class="row my-4">
+            <div class="col">Allow Student Base don attendance Percent</div>
+            <div class="col">
+                <input type="number" id="totDays" class="form-control" placeholder="Total Days"/>
+                <input type="number" id="attDays" class="form-control" placeholder="Attendance Days"/>
+                <select id="mdLeave" class="form-select">
+                    <option>No</option>
+                    <option>Yes</option>
+                </select>
+                <button type="button" class="btn btn-primary" onclick="findStudentEligibility()">Find Eligibility</button>
+            </div>
+            <div class="col"><span id="attStdAllowMsg"></span></div>
+            <script>
+                function findStudentEligibility(){
+                    let totDays = Number(document.getElementById('totDays').value);
+                    let attDays = Number(document.getElementById('attDays').value);
+                    let mdLeave = document.getElementById('mdLeave').value;
+                    let msg = document.getElementById('attStdAllowMsg');
+                    let result = "";
+                    let attPercent = (100*attDays)/totDays;
+
+                    if(attPercent > 75 || mdLeave == "Yes"){
+                        result = "Allowed";
+                        msg.style.backgroundColor = "green";
+                    }else{
+                        result = "Not Allowed";
+                        msg.className = "bg-danger";
+                    }
+                    msg.innerHTML = result;
+                }
+            </script>
+        </div>
     </div>
 </body>
 </html>
