@@ -45,7 +45,7 @@
         document.getElementById('posandNeg').innerHtml = msg;
     }
 </script>-->
-<div class="container">
+<!-- <div class="container">
     <div class="row" style="height: 200px;">
       <div class="col-4 border border-danger">
       </div>
@@ -59,19 +59,19 @@
     <div class="row" style="height: 100px;">
         <div class="col-4 border bg-light border-danger">
         </div>
-        <div class="col-2 border bg-light border-danger">
+        <div class="col-2 border bg-light border-danger"><button class="n">North</button>
         </div>
-        <div class="col-2 border bg-light border-danger">
+        <div class="col-2 border bg-light border-danger"><button onclick="changeeast() " class="e"> North</button>
         </div>
         <div class="col-4 border bg-light border-danger">
         </div>
-      </div>
+      </div> 
       <div class="row" style="height: 100px;">
         <div class="col-4 border bg-light border-danger">
         </div>
-        <div class="col-2 border bg-light border-danger">
+        <div class="col-2 border bg-light border-danger"><button class="w">West</button>
         </div>
-        <div class="col-2 border bg-light border-danger">
+        <div class="col-2 border bg-light border-danger"><button class="s">South</button>
         </div>
         <div class="col-4 border bg-light border-danger">
         </div>
@@ -86,19 +86,202 @@
         <div class="col-4 border border-danger">
         </div>
       </div>
+
+    <style>
+.w{
+border-radius: 20px;
+background-color: cadetblue;
+}
+.n{
+    border-radius: 20px;
+background-color: orange
+}
+
+.e{
+    border-radius: 20px;
+background-color:greenyellow
+} 
+.s{
+    border-radius: 20px;
+background-color:lightpink
+}
+    </style>
+    <script>
+        function changeeast() {
+            console.log()
+            
+        }
+    </script>
+</div>-->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+    <style>
+        body{
+            transition: all 1.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <select onchange="color(this.value)">
+        <option value="">color</option>
+        <option value="red">red</option>
+        <option value="yellowgreen">yellowgreen</option>
+        <option value="black">black</option>
+        <option value="pink">pink</option>
+        <option value="blue">blue</option>
+        <option value="orange">orange</option>
+    </select>
+    <script>
+
+        function color(value) {
+            document.body.style.backgroundColor=value;
+        }
+
+    </script>
     
-  </div>
-
-
-
-        
-        
-
-
-
-
-
 </body>
+</html>
 
-</html> 
+ -->
 
+
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <article>
+                <input type="number" id="userInput1" name="userInput1" placeholder="Enter Number">
+                <!-- <input type="number" id="userInput2" name="userInput2" placeholder="Enter Number"> -->
+            </article>
+
+            <article>
+                Result is : <span id="reserveMsg"></span><span id="reserveMsg1"></span>
+            </article>
+
+            <article>
+                <button onclick="reserve()">
+                    Enter
+                </button>
+            </article>
+
+            <article>
+                <button onclick="ready()">Reset</button>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        function reserve() {
+            let userInput1 = document.getElementById("userInput1").value;
+            // let userInput2 = document.getElementById("userInput2").value;
+            let data = (userInput1 % 10);
+            let confuse = (userInput1 / 10);
+            // let confuse2 = (data+confuse);
+            console.log(data)
+
+            if (data => data) {
+                gang = data;
+                if (confuse => confuse) {
+                    gang1 = confuse;
+                }
+                data1 = gang;
+                data2 = gang1;
+                console.log(gang, gang1);
+            }
+            // console.log(conf1use);
+            document.getElementById("reserveMsg").innerHTML = data1;
+            document.getElementById("reserveMsg1").innerHTML = Math.trunc(data2);
+        }
+
+        function ready() {
+            document.getElementById("reserveMsg").innerHTML = "";
+            document.getElementById("reserveMsg1").innerHTML = "";
+            document.getElementById("userInput1").value = "";
+            // document.getElementById("userInput2").value = "";
+        }
+    </script>
+
+    <main>
+        <section>
+
+            <h2>Dilute Problem</h2>
+
+            <article>
+                <input type="number" id="threeDigitNum" name="threeDigitNum"
+                    placeholder="Enter Only Three Digit Number">
+            </article>
+
+            <article>
+                <button onclick="dilute()">
+                    Enter
+                </button>
+
+                <button onclick="remove()">
+                    Reset
+                </button>
+            </article>
+
+            <article>
+                First Dilution : <span id="dilute"></span>
+            </article>
+
+            <article>
+                Diluted : <span id="dilute1"></span>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        function dilute() {
+            let threeDigitNum = Number(document.getElementById("threeDigitNum").value);
+            let hack = (threeDigitNum % 10);
+            let hack2 = (threeDigitNum / 10)
+            let hack3 = (Math.trunc(hack2) % 10)
+            let hack4 = (Math.trunc(hack2) / 10);
+            let hack5 = (Math.trunc(hack2));
+
+            let hack6 = (hack+hack3+Math.trunc(hack4));
+
+            let hack7 = (Math.trunc(hack6) % 10);
+            let hack8 = (Math.trunc(hack6) / 10);
+            let hack9 = (Math.trunc(hack8));
+
+            let hack10 = (hack7+hack9);
+
+            // console.log(threeDigitNum);
+            // console.log(hack);
+            
+            // console.log(Math.trunc(hack2));
+            
+            // console.log(hack3);
+            // console.log(Math.trunc(hack4));
+            // console.log(Math.trunc(hack4))
+            // console.log(hack6);
+            // console.log(hack7);
+            // console.log(Math.trunc(hack8));
+            // console.log(hack9);
+            // console.log(hack10);
+
+            document.getElementById("dilute").innerHTML = hack6;
+            document.getElementById("dilute1").innerHTML = hack10;
+
+        }
+        
+        function remove(){
+            document.getElementById("threeDigitNum").value = "";
+            document.getElementById("dilute").innerHTML = "";
+            document.getElementById("dilute1").innerHTML = "";
+        }
+    </script>
+</body>
+</html>

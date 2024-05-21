@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <main>
+        <section>
+            <article>
+                <table>
+                    <tr>
+                        <td><Button id="slot1">S1 is Available</Button></td> <td><Button id="slot2">S2 is Available</Button></td> <td><Button id="slot3">S3 is Available</Button></td> <td><Button id="slot4">S4 is Available</Button></td>
+                    </tr>
+                </table>
+            </article>
+
+            <article>
+                <input type="text" name="userInput" id="userInput" placeholder="Enter Vechile Number">
+
+                <select name="" id="chooseParking">
+                    <option>--None--</option>
+                    <option>S1</option>
+                    <option>S2</option>
+                    <option>S3</option>
+                    <option>S4</option>
+                </select>
+            </article>
+
+            <article>
+                <Button onclick="parkingSlot()">
+                    Book KNow
+                </Button>
+
+                <button onclick="releaseKnow()">
+                    Release Now
+                </button>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        function parkingSlot(){
+            let bikeNumber = document.getElementById("userInput").value;
+            let chooseParking = document.getElementById("chooseParking").value;
+            let bookedMsg = document.getElementById("slot1");
+            let bookedMsg1 = document.getElementById("slot2");
+            let bookedMsg2 = document.getElementById("slot3");
+            let bookedMsg3 = document.getElementById("slot4");
+            let parkingMsg = ""; 
+
+            if(chooseParking == "S1"){
+                parkingMsg = bikeNumber;
+                console.log(parkingMsg);
+                document.getElementById("slot1").innerHTML = "S1 is Booked by" + parkingMsg;
+                bookedMsg.style.backgroundColor = "red";
+            }else if(chooseParking == "S2"){
+                parkingMsg = bikeNumber;
+                console.log(parkingMsg);
+                document.getElementById("slot2").innerHTML = "S2 is Booked by" + parkingMsg;
+                bookedMsg1.style.backgroundColor = "red";
+            }else if(chooseParking == "S3"){
+                parkingMsg = bikeNumber;
+                console.log(parkingMsg);
+                document.getElementById("slot3").innerHTML = "S3 is Booked by" + parkingMsg;
+                bookedMsg2.style.backgroundColor = "red";
+            }else{
+                parkingMsg = bikeNumber;
+                console.log(parkingMsg);
+                document.getElementById("slot4").innerHTML = "S4 is Booked by" + parkingMsg;
+                bookedMsg3.style.backgroundColor = "red";
+            }
+        }
+
+        function releaseKnow(){
+            slot1.style.backgroundColor = "white"
+            slot2.style.backgroundColor = "white"
+            slot3.style.backgroundColor = "white"
+            slot4.style.backgroundColor = "white"
+            
+
+            document.getElementById("userInput").innerHTML = " ";
+            document.getElementById("slot1").innerHTML = "S1 is Available";
+            document.getElementById("slot2").innerHTML = "S2 is Available";
+            document.getElementById("slot3").innerHTML = "S3 is Available";
+            document.getElementById("slot4").innerHTML = "S4 is Available";
+        }
+    </script>
+</body>
+</html>
