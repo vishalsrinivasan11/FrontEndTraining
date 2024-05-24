@@ -239,6 +239,40 @@
                 }
             </script>
         </div>
+        <div class="row m-4">
+            <h2>Loops</h2>
+            <div class="col">
+                <button type="button" onclick="loopEx()" class="btn btn-primary">Start Loop</button>
+            </div>
+            <div>
+                <span id="loopResult"></span>
+            </div>
+            
+            <script>
+                function loopEx(){
+                    for(let num=1; num <=10; num++){
+                        console.log(num);
+                    }
+
+                    for(let num=100; num >=90; num--){
+                        num--;
+                        console.log(num);
+                    }
+
+                    let whNum=500;
+                    while(whNum<=210){
+                        console.log("While Loop : " +whNum);
+                        whNum++;
+                    }
+
+                    let dwhNum=500;
+                    do{
+                        console.log("Do While Loop : " +dwhNum);
+                        dwhNum++;
+                    }while(dwhNum<=310);
+                }
+            </script>
+        </div>
     </div>
 </body>
 </html>
