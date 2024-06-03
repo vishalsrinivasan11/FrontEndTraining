@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Example</title>
+</head>
+<body>
+    <div>
+        <h2>Array Example</h2>
+
+        <p id="arrOp"></p>
+        <script>
+                arrEx();
+            function arrEx(){
+
+                let arrOp = "";
+                let students = ["Saran", "Vishal", "Magesh","Kani","Saran", "Ranjani"];
+
+                arrOp = arrOp + "Students : " + students + "<br>";
+                arrOp = arrOp + "Array Length : " + students.length + "<br>";
+                arrOp += "Push Jai : " + students.push("Jai") + "<br>";
+                arrOp += "Push Ram : " + students.push("Ram") + "<br>";
+                arrOp = arrOp + "Students : " + students + "<br>";
+                arrOp += "Pop : " + students.pop() + "<br>";
+                arrOp = arrOp + "Students : " + students + "<br>";
+                arrOp += "Reverse : " + students.reverse() + "<br>";
+                arrOp = arrOp + "Students : " + students + "<br>";
+                arrOp += "Sort : " + students.sort() + "<br>";
+                arrOp = arrOp + "Students : " + students + "<br>";
+                arrOp += "Includes Magesh : " + students.includes("Magesh") + "<br>";
+                arrOp += "Includes Sakthi: " + students.includes("Sakthi") + "<br>";
+                arrOp += "Index Of Saran: " + students.indexOf("Saran") + "<br>";
+                arrOp += "Last Index Od Saran : " + students.lastIndexOf("Saran") + "<br>"; 
+                arrOp += "Join * : " + students.join("*") + "<br>";
+                arrOp += "Concat Prasanth Sureka: " + students.concat(["Prasanth", "Sureka"]) + "<br>";
+                arrOp = arrOp + "Students : " + students + "<br>";
+                arrOp += "Fill : " + students.fill("#", 2,4) + "<br>";
+                arrOp = arrOp + "Students : " + students + "<br>";
+                arrOp += "To String: " + students.toString() + "<br>";
+                arrOp = arrOp + "Students : " + students + "<br>";
+                arrOp += "Slice 4 6: " + students.slice(4, 6) + "<br>";
+                arrOp = arrOp + "Students : " + students + "<br>";
+                arrOp += "Splice 3 Dhoni: " + students.splice(3,0,"Dhoni") + "<br>";
+                arrOp = arrOp + "Students : " + students + "<br>";
+                arrOp += "Splice 2 Kholi: " + students.splice(2,1,"Kholi") + "<br>";
+                arrOp = arrOp + "Students : " + students + "<br>";
+                document.getElementById('arrOp').innerHTML = arrOp;
+
+                console.log(students);
+
+                console.log(students[5]);
+                students[7] = "Jayan";
+                console.log(students);
+                students[8] = "Arun";
+                console.log(students);
+
+            }
+        </script>
+    </div>
+</body>
+</html>
