@@ -273,6 +273,51 @@
                 }
             </script>
         </div>
+        <div>
+            <h2>String</h2>
+            <p id="strMsg"></p>
+            <script>
+                strEx();
+                function strEx(){
+                    let strMsg = "";
+                    let str = " Hai Hello, How are you buddies? ";
+
+                    strMsg += "String : " + str + " <br>";
+                    strMsg += "String Length : " + str.length + " <br>";
+                    strMsg += "String Index Of h : " + str.indexOf('h') + " <br>";
+                    strMsg += "String Last Index of h : " + str.lastIndexOf('H') + " <br>";
+                    strMsg += "String includes How : " + str.includes('How') + " <br>";
+                    strMsg += "String includes Why : " + str.includes('Why') + " <br>";
+                    strMsg += "String replace buddies : " + str.replace('buddies', 'folks') + " <br>";
+                    strMsg += "String  : " + str + " <br>";
+                    strMsg += "String startsWith  Hai : " + str.startsWith(' Hai') + " <br>";
+                    strMsg += "String endsWith ? : " + str.endsWith("? ") + " <br>";
+                    strMsg += "String subString 10,18: " + str.substring(10, 18) + " <br>";
+                    strMsg += "String slice 10,18 : " + str.slice(10,18) + " <br>";
+                    strMsg += "String : " + str + " <br>";
+                    strMsg += "String toLowerCase : " + str.toLowerCase() + " <br>";
+                    strMsg += "String toUpperCase : " + str.toUpperCase() + " <br>";
+                    strMsg += "String repeat 3 : " + str.repeat(3) + " <br>";
+                    strMsg += "String : " + str + " <br>";
+                    strMsg += "String CharAt 6 : " + str.charAt(6) + " <br>";
+                    strMsg += "String Concat Welcome : " + str.concat('welcome') + " <br>";
+                    strMsg += "String split by space : " + str.split(' ') + " <br>";
+                    console.log(str.split(' '));
+                    strMsg += "String trim : " + str.trim() + " <br>";
+                    console.log(str);
+                    console.log(str.trim());
+                    strMsg += "String  : " + str + " <br>";
+
+                    document.getElementById('strMsg').innerHTML = strMsg;
+                }
+            </script>
+        </div>
+
     </div>
+    
+
+
+    
+    
 </body>
 </html>
