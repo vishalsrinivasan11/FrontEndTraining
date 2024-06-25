@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPs Ex</title>
+</head>
+<body>
+    <div>
+        <h2>OOPs Example</h2>
+    </div>
+    <script>
+        class Person
+        {
+            personName='';
+            age=0;
+            aadhar=0;
+
+            setAadhar(aadhar){
+                this.aadhar = aadhar;
+            }
+            setPersonName(personName){
+                this.personName = personName;
+            }
+
+            setAge(age){
+                this.age = age;
+            }
+            displayPersonDetails(){
+                console.log(this.personName, this.age, this.aadhar);
+            }
+
+
+        }
+
+        let person = new Person();
+        person.setPersonName("Kavin");
+        person.setAge(25);
+        person.setAadhar(34678787967879);
+        person.displayPersonDetails();
+
+        class Student extends Person
+        {
+            studentId=0;
+            instituteName='';
+            course='';
+
+           registerStudent(studentId){
+            this.studentId = studentId;
+            console.log("Student has been registered...");
+           }
+           allocateCourse(courseName){
+            this.course=courseName;
+            console.log("The Course has been Allocated");
+           }
+
+           displayStudentInfo(){
+            console.log(this.personName, this.age, this.aadhar, this.studentId, this.instituteName, this.course);
+           }
+
+           constructor(instituteName)
+           {
+            super();
+            this.instituteName=instituteName;
+           }
+        }
+
+        let student = new Student("Besant");
+        student.setPersonName("Anbu");
+        student.setAge(22);
+        student.setAadhar(56878980954);
+        student.registerStudent(3254);
+        student.allocateCourse('FullStack');
+        student.displayStudentInfo();
+
+        class Candiate extends Student
+        {
+            candidateId=0;
+            companyName='';
+
+            scheduleInterview(){
+                console.log("Interview Scheduled for "+ this.candidateId + " in " + this.companyName);
+            }
+
+            interviewResult(result){
+                try{
+                    if(!result){
+                        throw new Error("Interview Failed");
+                    }
+                }catch(er){
+                    console.log(er);
+                    alert("Something Went wrong..");
+                }
+            }
+
+            constructor(candidateId, companyName, instituteName){
+                super(instituteName);
+                this.candidateId = candidateId;
+                this.companyName = companyName;
+            }
+        }
+
+        let candidate = new Candiate(1234, "Amazon", "Besant");
+        candidate.setPersonName("Sam");
+        candidate.setAge(23);
+        candidate.setAadhar(5687980934);
+        candidate.registerStudent(2345);
+        candidate.allocateCourse("Front End");
+        candidate.displayPersonDetails();
+        candidate.displayStudentInfo();
+        candidate.scheduleInterview();
+        candidate.interviewResult(false);
+    </script>
+</body>
+</html>
