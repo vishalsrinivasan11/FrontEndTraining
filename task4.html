@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <article>
+                <select id="state">
+                    <option value="">--None--</option>
+                    <option value="TN">TamilNadu</option>
+                    <option value="KL"> Kerala</option>
+                    <option value="AP">Andhra</option>
+
+                </select>
+            </article>
+
+            <article>
+                <button onclick="cities()">
+                    Enter
+                </button>
+            </article>
+
+            <article>
+                <span id="msg"></span>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        function cities() {
+            let area = document.getElementById("state").value;
+
+            // let citiesMsg = "";
+
+            if (area == "TN") {
+                citiesMsg = " chennai , madurai , thirichy  ";
+                //console.log(citiesMsg);
+                // document.getElementById("msg").innerHTML = citiesMsg;
+            } else if (area == "KL") {
+                citiesMsg = "palakadu , kochi , yarkadu ";
+                //console.log(citiesMsg);
+                // document.getElementById("msg").innerHTML = citiesMsg;
+            } else {
+                citiesMsg = "guntur , ranipetta , gumudipundi";
+                //console.log(citiesMsg);
+                // document.getElementById("msg").innerHTML = citiesMsg;
+            }
+            document.getElementById("msg").innerHTML = citiesMsg;
+
+        }
+    </script>
+    <main>
+        <article >
+                <select name="" id="citiesMsg">
+                    <option value="">states</option>
+                    <option value="TN">TamilNadu</option>
+                    <option value="KL">Kerala</option>
+                    <option value="AP">Andhra</option>
+                </select>
+            </article>
+
+            
+                <article>
+                    <button onclick="states()">select</button>
+                </article>
+           
+
+        <article>
+            <span id = "msg1"></span>
+        </article>
+    </main>
+         <script>
+            function states(){
+                let city = document.getElementById("citiesMsg").value;
+                 
+                if(city == "TN"){
+                    stateMsg = "qwe , qwe , qwer ";
+                    console.log(stateMsg);
+                }
+                else if (city == "KL"){
+                    stateMsg = "1234 , 123 , 234 ";
+                }
+                else {
+                    stateMsg = "123 , 234 , qwer ";
+                }
+                 document.getElementById("msg1").innerHTML = stateMsg;
+            }
+         </script>
+
+
+</body>
+
+</html>

@@ -292,7 +292,7 @@
                     strMsg += "String  : " + str + " <br>";
                     strMsg += "String startsWith  Hai : " + str.startsWith(' Hai') + " <br>";
                     strMsg += "String endsWith ? : " + str.endsWith("? ") + " <br>";
-                    strMsg += "String subString 10,18: " + str.substring(10, 18) + " <br>";
+                    strMsg += "String subString 10,18: " + str.substring(10,18) + " <br>";
                     strMsg += "String slice 10,18 : " + str.slice(10,18) + " <br>";
                     strMsg += "String : " + str + " <br>";
                     strMsg += "String toLowerCase : " + str.toLowerCase() + " <br>";
@@ -310,6 +310,35 @@
 
                     document.getElementById('strMsg').innerHTML = strMsg;
                 }
+            </script>
+        </div>
+        <div>
+            <h2>RegEx</h2>
+            <script>
+                function regExample(){
+                    console.log("Regular Expression....");
+                    let regEx = new RegExp('[123]');
+                    console.log(regEx.test('8578209'));
+                    console.log(regEx.test('vhjvj'));
+                    console.log(regEx.test('857fuf809'));
+                    console.log(regEx.exec('jf356jhf'));
+                    let str = "Hello 5All!";
+                    console.log(str.match('[0-9]'));
+                    console.log(str.search('[0-9]'));
+
+                    str = "9812345678";
+                    regEx = /^[6-9]+[0-9]{9}$/;
+                    console.log(regEx.test(str));
+                    str = "1234567890";
+                    console.log(regEx.test(str));
+                    str = "81234567";
+                    console.log(regEx.test(str));
+                    str = "812345677867";
+                    console.log(regEx.test(str));
+                    str = "81234tyh567";
+                    console.log(regEx.test(str));
+                }
+                regExample();
             </script>
         </div>
 

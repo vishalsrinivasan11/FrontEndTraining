@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>print star</title>
+</head>
+
+<body>
+    <div>
+        <script>
+            for (var row = 0; row <= 5; row++) {
+                for (var col = 1; col <= row; col++) {
+                    document.write("*" + " ");
+                }
+                document.write("<br>");
+            }
+        </script>
+    </div>
+    <hr>
+    <div>
+        <script>
+            for (var row = 5; row >= 1; row--) {
+                for (var col = 1; col <= row; col++) {
+                    document.write("*" + " ");
+                }
+                document.write("<br>");
+            }
+        </script>
+    </div>
+    <hr>
+    <div>
+        <script>
+            for (var row = 5; row <= 5; row++) {
+                for (var col = 5; col <= row; col++) {
+                    console.log(row, col);
+                }
+                document.write("");
+            }
+        </script>
+    </div>
+    <main>
+        <section>
+            <article>
+                <span>Click Here</span>
+                <!-- <input type="number" id="startPoint" name="startPoint" placeholder="Enter a Number">
+            <input type="number" id="endPoint" name="endPoint" placeholder="Enter a Number"> -->
+            </article>
+
+            <article>
+                <button onclick="pattern()">
+                    Click
+                </button>
+            </article>
+
+            <article>
+                <span id="patternMsg"></span>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        function pattern() {
+            // let startPoint = Number(document.getElementById("startPoint").value);
+            // let endPoint = Number(document.getElementById("endPoint").value);
+
+            let patternMsg = "";
+
+            for (let row = 1; row <= 5; row++) {
+                for (let col = 1; col <= 5; col++) {
+                    patternMsg = patternMsg + col;
+                    // console.log(patternMsg);
+                }
+                patternMsg = patternMsg + "<br/>";
+                console.log(patternMsg);
+                document.getElementById("patternMsg").innerHTML = patternMsg;
+            }
+        }
+    </script>
+    <hr>
+    <main>
+        <article>
+            <button onclick="printNum()"> click</button>
+        </article>
+
+        <article>
+            <span id="patternMsg"> </span>
+        </article>
+    </main>
+    <script>
+        function printNum() {
+
+            let patternMsg = "";
+
+            for (let row = 1; row <= 6; row++) {
+                for( col=1; col<=5; col++) {
+                  patternMsg = patternMsg+ row;
+                }
+                  patternMsg = patternMsg + "<br>";
+                  console.log(patternMsg);
+                  Document.getElementById("patternMsg").innerHTML = patternMsg;
+    }
+
+        }
+    </script>
+
+
+</body>
+
+</html>

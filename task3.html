@@ -12,7 +12,7 @@
         crossorigin="anonymous"></script>
 
 </head>
-
+<h2> Reverse number</h2>
 <body>
     <div class=container>
         <div class="col m-2 "> <input type="number" id="userInput1" name="userInput1" placeholder="enter Number"></div>
@@ -24,9 +24,6 @@
             <button onclick="reverse()">
                 Enter
             </button>
-        </div>
-
-        <div>
             <button onclick="reset()">
                 Reset
             </button>
@@ -37,7 +34,7 @@
                 let userInput1 = document.getElementById("userInput1").value;
                 let data = (userInput1 % 10);
                 let con = (userInput1 / 10);
-                console.log(data +""+con)
+                console.log(data+con)
                 
 
                 if (data => data) {
@@ -47,7 +44,7 @@
                     }
                     data1 = gat;
                     data2 = gat1;
-                    console.log(gat, gat1);
+                    console.log(gat,gat1);
                 }
                 document.getElementById("reserveMsg").innerHTML = data1;
                 document.getElementById("reserveMsg1").innerHTML = Math.trunc(data2);
@@ -65,5 +62,65 @@
 
 
 </body>
+<main>
+    <section>
 
+        <h2>Dilute Problem</h2>
+
+        <article class="">
+            <input type="number" id="threeDigitNum" name="threeDigitNum"
+                placeholder="Enter Only Three Digit Number">
+        </article>
+
+        <article>
+            <button onclick="dilute()">
+                Enter
+            </button>
+
+            <button onclick="remove()">
+                Reset
+            </button>
+        </article>
+
+        <article>
+            First Dilution : <span id="dilute"></span>
+        </article>
+
+        <article>
+            Diluted : <span id="dilute1"></span>
+        </article>
+    </section>
+</main>
+
+<script>
+    function dilute() {
+        let threeDigitNum = Number(document.getElementById("threeDigitNum").value);
+        let hack = (threeDigitNum % 10);
+        let hack2 = (threeDigitNum / 10)
+        let hack3 = (Math.trunc(hack2) % 10)
+        let hack4 = (Math.trunc(hack2) / 10);
+        let hack5 = (Math.trunc(hack2));
+
+        let hack6 = (hack+hack3+Math.trunc(hack4));
+
+        let hack7 = (Math.trunc(hack6) % 10);
+        let hack8 = (Math.trunc(hack6) / 10);
+        let hack9 = (Math.trunc(hack8));
+
+        let hack10 = (hack7+hack9);
+
+        
+        document.getElementById("dilute").innerHTML = hack6;
+        document.getElementById("dilute1").innerHTML = hack10;
+
+    }
+    
+    function remove(){
+        document.getElementById("threeDigitNum").value = "";
+        document.getElementById("dilute").innerHTML = "";
+        document.getElementById("dilute1").innerHTML = "";
+    }
+</script>
+</body>
 </html>
+
